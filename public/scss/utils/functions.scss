@@ -43,7 +43,7 @@ $rem-base: 16px;
 	@return $rem-values;
 }
 
-@function fluid($min-value, $max-value, $min-breakpoint: "phone-xsmall", $max-breakpoint: "desktop-large") {
+@function fluid($min-value, $max-value, $min-breakpoint: "phone-xsmall", $max-breakpoint: "desktop-medium") {
 	@if $min-value==0 {
 		$min-value: 0.001;
 	}

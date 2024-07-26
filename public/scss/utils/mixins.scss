@@ -31,14 +31,14 @@
 	text-overflow: ellipsis;
 }
 
-@mixin sequential-delay( $length, $delayAmount: 100ms, $child: '', $addedDelay: 0s) {
+@mixin sequential-delay($length, $delayAmount: 100ms, $child: '', $addedDelay: 0s) {
 	@for $x from 1 through $length {
-		&:nth-child( #{ $x } ) #{ $child } {
+		&:nth-child(#{ $x }) #{ $child } {
 			transition-delay: #{ ( $x - 1 ) * $delayAmount + $addedDelay };
 		}
 	}
 
-	&:nth-child( n + #{ $length + 1 } ) {
+	&:nth-child(n + #{ $length + 1 }) {
 		transition-delay: #{ $delayAmount * $length };
 	}
 }
@@ -47,6 +47,7 @@
 	display: flex;
 	justify-content: $justify;
 	align-items: $align;
+	flex-direction: $dir;
 	flex-wrap: $wrap;
 }
 
@@ -68,4 +69,15 @@
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	white-space: nowrap;
+}
+
+@mixin full-bleed() {
+	width: 100vw;
+	max-width: unset;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	z-index: 0;
 }

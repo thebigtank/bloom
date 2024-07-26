@@ -1,0 +1,81 @@
+header {
+    padding: rem(40) 0;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .col {
+        display: flex;
+        align-items: center;
+
+        &:first-of-type {
+            gap: rem(60);
+        }
+
+        &:last-of-type {
+            gap: rem(20);
+        }
+    }
+
+    .logo {
+        text-transform: uppercase;
+        font-size: fluid(24, 28);
+        font-family: var(--heading-font);
+        font-weight: 300;
+        letter-spacing: rem(2.5);
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(32);
+
+        &-item {
+            a {
+                font-size: fluid(14, 16);
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .cta {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(8);
+
+        &-btn {
+            width: rem(30);
+            height: rem(30);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                flex: 1;
+            }
+        }
+    }
+
+    .lang-filter {
+        .selected {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            gap: rem(4);
+
+            span {
+                font-size: rem(14);
+            }
+
+            svg {
+                width: rem(18);
+                height: rem(18);
+            }
+        }
+
+    }
+
+}
