@@ -11,15 +11,56 @@ html {
 
 body {
 	overflow-x: hidden;
-	line-height: var(--base-line-height);
-	background-color: var(--body-bg-color);
-	color: var(--body-color);
-	font-family: var(--base-font-family);
+	line-height: 1.5;
+	background-color: var(--body-background);
+	color: var(--body-foreground);
+	font-family: var(--body-font);
 }
 
 a {
 	color: inherit;
+	font-family: var(--body-font);
 	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--heading-font);
+}
+
+.heading {
+	letter-spacing: rem(3.5);
+	text-transform: capitalize;
+
+	span {
+		font-family: var(--heading-alternate);
+		letter-spacing: normal;
+	}
+
+	&-style-1 {
+		line-height: 1.1;
+
+		span {
+			display: block;
+		}
+	}
+
+	&-style-2 {
+		span {
+			display: inline-block;
+		}
+	}
+}
+
+.label {
+	display: inline-block;
+	padding: rem(5) rem(20);
+	border: rem(2) solid var(--color-2);
+	font-size: fluid(14, 16);
 }
 
 button {
@@ -29,10 +70,6 @@ button {
 	cursor: pointer;
 	font: inherit;
 	outline: none;
-}
-
-img {
-	max-width: 100%;
 }
 
 .visually-hidden {
