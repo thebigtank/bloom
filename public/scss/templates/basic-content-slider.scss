@@ -1,4 +1,57 @@
 .block.basic-content-slider {
-    height: 500px;
-    background-color: brown;
+
+    .wrapper {}
+
+    .row {}
+
+    .col {}
+
+    .slide {
+        position: relative;
+        height: rem(550);
+
+        figure {
+            @include full-bleed();
+            height: rem(550);
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: var(--color-2);
+                opacity: 0.25;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .content {
+            position: absolute;
+            bottom: rem(60);
+            z-index: 2;
+            max-width: rem(750);
+            color: var(--color-1);
+
+            .heading {
+                font-size: fluid(48, 68);
+                margin-bottom: rem(20);
+            }
+
+            p {
+                margin-bottom: rem(30);
+            }
+        }
+    }
+
 }

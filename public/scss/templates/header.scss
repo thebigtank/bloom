@@ -11,12 +11,24 @@ header {
         display: flex;
         align-items: center;
 
-        &:first-of-type {
+        &:nth-child(1) {
             gap: rem(60);
         }
 
-        &:last-of-type {
+        &:nth-child(2) {
             gap: rem(20);
+
+            @include media('<=1140px') {
+                display: none;
+            }
+        }
+    }
+
+    .hamburger {
+        display: inline-flex;
+
+        @include media('>1140px') {
+            display: none;
         }
     }
 
@@ -26,6 +38,12 @@ header {
         font-family: var(--heading-font);
         font-weight: 300;
         letter-spacing: rem(2.5);
+    }
+
+    nav.desktop {
+        @include media('<=940px') {
+            display: none;
+        }
     }
 
     .main-menu {
@@ -75,7 +93,6 @@ header {
                 height: rem(18);
             }
         }
-
     }
 
 }
