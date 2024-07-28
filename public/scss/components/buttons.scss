@@ -11,6 +11,10 @@
     text-transform: capitalize;
     transition: all 300ms ease-in-out;
 
+    svg {
+        stroke-width: 1.5px;
+    }
+
     &::after {
         content: '';
         position: absolute;
