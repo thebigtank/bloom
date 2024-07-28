@@ -25,9 +25,6 @@ export default function sliderOne() {
         const swiperBg = initializeSwiper(
           block.querySelector(".swiper.background"),
           {
-            pagination: {
-              el: swiperPagination,
-            },
             slidesPerView: 1,
             autoplay: false,
           }
@@ -38,6 +35,7 @@ export default function sliderOne() {
           {
             pagination: {
               el: swiperPagination,
+              clickable: true,
             },
             slidesPerView: 1,
             autoplay: false,
