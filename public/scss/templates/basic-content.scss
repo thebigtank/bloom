@@ -1,0 +1,84 @@
+.block.basic-content {
+    padding: rem(50) 0;
+
+    .wrapper {}
+
+    .row {
+        display: flex;
+        gap: rem(60);
+    }
+
+    .col {
+        position: relative;
+
+        &:nth-child(1) {
+            flex: 1;
+        }
+
+
+        &:nth-child(2) {
+            flex: 1.5;
+        }
+
+        &:has(a) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content {
+            max-width: rem(600);
+
+            .heading {
+                text-transform: initial;
+                font-size: fluid(45, 65);
+                margin-bottom: rem(20);
+            }
+
+            p {
+                width: 80%;
+                margin-bottom: rem(50);
+            }
+        }
+
+        .image-cards {
+            display: grid;
+            grid-template-columns: repeat(2, rem(280));
+            gap: rem(15);
+
+            figure {
+                @include ratio(280, 280);
+
+                &:last-of-type {
+                    position: relative;
+                    bottom: rem(45);
+                }
+            }
+        }
+
+        .large-image {
+            @include ratio(800, 860);
+        }
+    }
+
+    &.is-style-image-left {
+        .col {
+            &:nth-child(1) {
+                order: 2;
+                flex-direction: column-reverse;
+            }
+
+            &:nth-child(2) {
+                order: 1;
+            }
+
+            .image-cards {
+                figure {
+                    &:last-of-type {
+                        top: rem(45);
+                    }
+                }
+            }
+        }
+    }
+}

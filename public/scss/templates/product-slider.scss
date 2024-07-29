@@ -1,5 +1,5 @@
 .block.product-slider {
-    padding: rem(100) 0;
+    padding: rem(100) 0 rem(25) 0;
 
     .row {
         &:nth-child(1) {
@@ -18,7 +18,7 @@
     }
 
     .tabs {
-        display: flex;
+        display: none;
         gap: rem(40);
 
         .tab {
@@ -59,9 +59,9 @@
         &-scrollbar {
             left: 0;
             bottom: 0;
-            height: 1.5px;
+            height: 1px;
             border-radius: 0;
-            background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, 0.05));
+            width: 100%;
 
             &-drag {
                 border-radius: 0;
@@ -152,6 +152,13 @@
                 opacity: 0.2;
                 text-decoration: line-through;
             }
+        }
+    }
+
+
+    &.has-tabs {
+        .tabs {
+            display: flex;
         }
     }
 }
