@@ -1,0 +1,15 @@
+.block.showcase {
+    padding: rem(50) 0;
+
+    .large-image {
+        @include full-bleed();
+        height: rem(450);
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
