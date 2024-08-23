@@ -1,0 +1,57 @@
+.block.accordion {
+    padding-bottom: rem(50);
+    margin-bottom: 900px;
+
+    .heading {
+        margin-bottom: rem(40);
+    }
+
+    .faq {
+        columns: 2;
+        column-gap: rem(40);
+
+        &-item {
+            padding-bottom: rem(20);
+            margin-bottom: rem(20);
+            border-bottom: rem(1) solid rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .title {
+                    font-family: var(--body-font);
+                    font-size: fluid(14, 16);
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+
+                svg {
+                    height: rem(16);
+                    width: rem(16);
+                }
+            }
+
+            &-content {
+                height: 0;
+                overflow: hidden;
+
+                p {
+                    padding-top: rem(10);
+                    color: var(--color-3);
+                    font-size: fluid(14, 14);
+                    line-height: 1.6;
+                }
+            }
+
+            &.active {
+                .faq-item-content {
+                    height: max-content;
+                }
+            }
+        }
+    }
+}

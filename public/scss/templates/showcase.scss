@@ -3,7 +3,7 @@
 
     .large-image {
         @include full-bleed();
-        height: rem(550);
+        height: rem(500);
         overflow: hidden;
 
         img {
