@@ -16,6 +16,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.6.2",
     "hamburgers": "^1.2.1",
+    "lenis": "^1.1.13",
     "lucide": "^0.414.0",
     "swiper": "^11.1.8"
   }
